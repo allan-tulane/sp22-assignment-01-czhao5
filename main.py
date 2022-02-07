@@ -5,8 +5,20 @@ See assignment-01.pdf for details.
 # no imports needed.
 
 def foo(x):
-    ### TODO
+  #if part of SPARC
+    if x <= 1:
+      return x
+  #else part of SPARC
+    else:
+      ra,rb = (foo(x-1)),(foo(x-2))
+    #the "in ra+rb"
+      return ra + rb
     pass
+
+# testing 
+print(foo(0),foo(1), foo(2), foo(3), foo(4), foo(5), foo(6))
+
+
 
 def longest_run(mylist, key):
     ### TODO
